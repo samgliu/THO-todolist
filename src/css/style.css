@@ -159,6 +159,10 @@ li{
     justify-content: left;
 }
 
+.selected {
+    background-color: #ffffff;
+}
+
 #rightcontent div>button:nth-of-type(2){
     background-color: #f3f3f3;
     color: black;

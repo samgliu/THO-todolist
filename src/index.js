@@ -1,11 +1,9 @@
 import './css/style.css';
-import { compareAsc, format } from 'date-fns';
+import { compareAsc, format, toDate, parse } from 'date-fns';
 import * as defaultLoader from './modules/defaultLoader';
 import * as pageCreator from './modules/pageCreator';
 
 let toDoList = []; // default project lists
-
-
 
 const projList = (theName) => {
     let projName = theName;
@@ -13,9 +11,22 @@ const projList = (theName) => {
 
     const getProjName = () => projName;
     const getTheList = () => theList;
-    const pushToList = (obj) => theList.push(obj);
+    const pushToList = (obj) => {
+        theList.push(obj);
+        sortList();
+    };
     const removeFromList = (ind) => theList.splice(ind, 1);
     const toJSON = () => theList;
+    const sortList = () => {
+        let newList =
+            theList.sort(function (a, b) {
+                return (parse(a.getDuedate(), 'yyyy-MM-dd', new Date()))
+                    - (parse(b.getDuedate(), 'yyyy-MM-dd', new Date()));
+            });
+        theList = newList;
+        console.log(theList[0].getDuedate());
+    }
+
     return {
         getProjName,
         getTheList,
@@ -57,9 +68,10 @@ function isLocalEmpty() {
 
 function loader() {
     if (isLocalEmpty()) {
-        let list1 = ListObj("finish the THO-todolist", "finish the todolist", "09212021", "high", 0);
-        let list2 = ListObj("test2", "test2", "09212021", "medium", 0);
+        let list1 = ListObj("finish the THO-todolist", "finish the todolist", "2021-09-21", "high", 0);
+        let list2 = ListObj("test2", "test2", "2021-09-20", "medium", 0);
         let inbox = projList("Inbox");
+
         toDoList[0] = inbox;
         toDoList[0].pushToList(list1);
         toDoList[0].pushToList(list2);
@@ -67,6 +79,7 @@ function loader() {
     let headDiv = document.getElementById("header");
     defaultLoader.headerCreator(headDiv);
     defaultLoader.listCreator(headDiv, toDoList);
+    //let data1 = parse('2021-09-20', 'yyyy-MM-dd', new Date());
     reset(0);
 }
 
@@ -156,7 +169,15 @@ function displayRight(inputid) {
     let id = parseInt(inputid.replace('list-', ''));
     let rightDiv = document.getElementById("rightcontent");
     pageCreator.displayCreator(rightDiv, id, toDoList);
+
+    let theDiv = document.getElementById(inputid);
+    document.querySelectorAll(`.selected`).forEach(function (el) {
+        el.classList.remove('selected');
+    })
+    theDiv.classList.add("selected");
+
 }
+
 
 function delList(inputid) {
     let index = parseInt(inputid.replace('list-del-', ''));
@@ -231,7 +252,7 @@ function JSONtoList(nameArr, listArr) {
         let newprojlist = projList(nameArr[i]);
         for (let j = 0; j < listArr[i].length; j++) {
             let arr = listArr[i][j].split("--");
-            let listobj = ListObj(`${arr[0]}`,`${arr[1]}`,`${arr[2]}`, `${arr[3]}`, parseInt(arr[4]));
+            let listobj = ListObj(`${arr[0]}`, `${arr[1]}`, `${arr[2]}`, `${arr[3]}`, parseInt(arr[4]));
             newprojlist.pushToList(listobj);
         }
         toDoList.push(newprojlist);

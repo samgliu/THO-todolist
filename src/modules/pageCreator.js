@@ -17,8 +17,6 @@ function navCreator(parentDiv, list) {
             liDiv.appendChild(btn2);
 
         }
-
-
         uiDiv.appendChild(liDiv);
 
     }
@@ -44,7 +42,8 @@ function displayCreator(parentDiv, index, list) {
         singleDiv.appendChild(btn2);
 
         let singleP = document.createElement("p");
-        singleP.textContent = ((list[index].getTheList())[i].getTitle());
+        let text1 = (list[index].getTheList())[i].getDuedate();
+        singleP.textContent = ((text1) + " " + ((list[index].getTheList())[i].getTitle()));
         singleDiv.appendChild(singleP);
         let btn1 = document.createElement("button");
         btn1.id = "detailList-" + index + "-" + i;
