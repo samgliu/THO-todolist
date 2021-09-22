@@ -35,6 +35,7 @@ body {
     justify-content: left;
     width: 23%;
     height: 100%;
+    overflow: auto;
     background-color: #f7f7f7;
 }
 
@@ -80,6 +81,7 @@ li:hover {
 #rightcontent {
     background-color: #ffffff;
     height: 95%;
+    overflow: auto;
 }
 
 #rightcontent div {
@@ -193,13 +195,18 @@ li {
 }
 
 .delbtn {
+    display: none;
     background-color: #db4c3f;
     color: #ffffff;
     cursor: pointer;
-    margin: 5px 5px 5px 5px;
+    margin: 5px 5px 5px 10px;
     border-style: none;
     border-radius: 50%;
     height: 60%;
+}
+
+.btnselected {
+    display: block;
 }
 
 p {
