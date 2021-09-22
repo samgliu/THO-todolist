@@ -207,12 +207,6 @@ function displayRight(inputid) {
         el.classList.remove("selected");
     });
     theDiv.classList.add("selected");
-
-    document.querySelectorAll(`.btnselected`).forEach(function (el) {
-        el.classList.remove("btnselected");
-    });
-    let theBtn = document.getElementById("list-del-" + id);
-    if (theBtn) theBtn.classList.add("btnselected");
 }
 
 function delList(inputid) {

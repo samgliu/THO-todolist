@@ -45,9 +45,14 @@ li {
     padding-left: 1em;
     cursor: pointer;
 }
+
 li:hover {
     background-color: #fcfcfc;
     border: #000000;
+}
+
+li:hover button {
+    display: block;
 }
 
 #addListButton {
@@ -203,10 +208,6 @@ li {
     border-style: none;
     border-radius: 50%;
     height: 60%;
-}
-
-.btnselected {
-    display: block;
 }
 
 p {
