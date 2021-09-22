@@ -1,209 +1,208 @@
 #header {
-    align-items: center;
-    display: flex;
-    background-color: #db4c3f;
-    color: white;
-    font-size: 0.8em;
-    height: 5%;
+  align-items: center;
+  display: flex;
+  background-color: #db4c3f;
+  color: white;
+  font-size: 0.8em;
+  height: 5%;
 }
 
 #header h1 {
-    justify-content: left;
-    margin-right: auto;
-    padding-left: 0.3em;
+  justify-content: left;
+  margin-right: auto;
+  padding-left: 0.3em;
 }
 
 #addButton {
-    background-color: #db4c3f;
-    border: none;
-    font-size: 2.8em;
-    color: white;
-    cursor: pointer;
+  background-color: #db4c3f;
+  border: none;
+  font-size: 2.8em;
+  color: white;
+  cursor: pointer;
 }
 
 body {
-    font-family: sans-serif;
-    height: 900px;
+  font-family: sans-serif;
+  height: 900px;
 }
 
 #content {
-    display: flex;
-    height: 95%;
+  display: flex;
+  height: 95%;
 }
 
 #leftcontent {
-    justify-content: left;
-    width: 23%;
-    height: 100%;
-    background-color: #f7f7f7;
+  justify-content: left;
+  width: 23%;
+  height: 100%;
+  background-color: #f7f7f7;
 }
 
-li{
-    font-size: 1.5rem; 
-    list-style-type: none;
-    padding-left: 1em;
-    cursor: pointer;
+li {
+  font-size: 1.5rem;
+  list-style-type: none;
+  padding-left: 1em;
+  cursor: pointer;
 }
-li:hover{
-    background-color: #fcfcfc;
-    border:#000000;
-}
-
-#addListButton{
-    font-size: 1.2rem;
-    width: 100%;
-    border: none;
-    background-color: #f7f7f7;
-    cursor: pointer;
-    padding:0.3em;
+li:hover {
+  background-color: #fcfcfc;
+  border: #000000;
 }
 
-#addListButton:hover{
-    background-color: #fcfcfc;
+#addListButton {
+  font-size: 1.2rem;
+  width: 100%;
+  border: none;
+  background-color: #f7f7f7;
+  cursor: pointer;
+  padding: 0.3em;
+}
+
+#addListButton:hover {
+  background-color: #fcfcfc;
 }
 
 #addlistbutton {
-    background-color: #db4c3f;
-    font-size: 1em;
-    color: white;
-    cursor: pointer;
+  background-color: #db4c3f;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
 }
 
 #addListButtonCancel {
-    font-size: 1em;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    margin-right: 1em;
-    margin-left: 0.5em;
+  font-size: 1em;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  margin-right: 1em;
+  margin-left: 0.5em;
 }
 
 #rightcontent {
-    background-color: #ffffff;
-    height: 95%;
+  background-color: #ffffff;
+  height: 95%;
 }
 
-#rightcontent div{
-    height: 2em;
+#rightcontent div {
+  height: 2em;
 }
 
 .formPopup {
-    display: none;
-    position: fixed;
-    left: 35%;
-    top: 10%;
-    width: 50%;
-    min-width: 150px;
-    color: black;
-    background-color: #eee;
-    border: 2px solid #000000;
-    padding: 10px 10px 10px 10px;
+  display: none;
+  position: fixed;
+  left: 35%;
+  top: 10%;
+  width: 50%;
+  min-width: 150px;
+  color: black;
+  background-color: #eee;
+  border: 2px solid #000000;
+  padding: 10px 10px 10px 10px;
 }
 
 .formContainer {
-    display: grid;
-    grid-template-rows: repeat(auto, 10%);
+  display: grid;
+  grid-template-rows: repeat(auto, 10%);
 }
 
-.formContainer>lable {
-    padding: 1%;
+.formContainer > lable {
+  padding: 1%;
 }
 
-.formContainer>select {
-    padding: 0.5%;
-    width: 20%;
-    margin-left: 2%;
+.formContainer > select {
+  padding: 0.5%;
+  width: 20%;
+  margin-left: 2%;
 }
 
-.formContainer>input {
-    padding: 1%;
-    margin: 1% 2%;
-    border: 1px;
-    background: rgb(255, 255, 255);
+.formContainer > input {
+  padding: 1%;
+  margin: 1% 2%;
+  border: 1px;
+  background: rgb(255, 255, 255);
 }
 
 #addtaskbutton {
-    background-color: #db4c3f;
-    font-size: 1.1em;
-    width: 6em;
-    height: 2.3em;
-    color: white;
-    cursor: pointer;
-    padding: 5px 5px 5px 5px;
+  background-color: #db4c3f;
+  font-size: 1.1em;
+  width: 6em;
+  height: 2.3em;
+  color: white;
+  cursor: pointer;
+  padding: 5px 5px 5px 5px;
 }
 
 #addButtonCancel {
-    background-color: #ffffff;
-    font-size: 1.1em;
-    width: 4em;
-    height: 2.3em;
-    color: rgb(196, 194, 194);
-    cursor: pointer;
-    padding: 5px 5px 5px 5px;
-    margin-right: 5px;
+  background-color: #ffffff;
+  font-size: 1.1em;
+  width: 4em;
+  height: 2.3em;
+  color: rgb(196, 194, 194);
+  cursor: pointer;
+  padding: 5px 5px 5px 5px;
+  margin-right: 5px;
 }
 
 select {
-    margin: 5px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
 }
 
-.listEl{
-    display: flex;
-    align-items: center;
-    justify-content: left;
+.listEl {
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
 
-li{
-    height: 1.5em;
-    display: flex;
-    align-items: center;
-    justify-content: left;
+li {
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
 
 .selected {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
-#rightcontent div>button:nth-of-type(2){
-    background-color: #f3f3f3;
-    color: black;
-    cursor: pointer;
-    margin: 5px 5px 5px 5px;
-    border-style: none;
-    border-radius: 5%;
-    height: 60%;
-
+#rightcontent div > button:nth-of-type(2) {
+  background-color: #f3f3f3;
+  color: black;
+  cursor: pointer;
+  margin: 5px 5px 5px 5px;
+  border-style: none;
+  border-radius: 5%;
+  height: 60%;
 }
 
-#rightcontent div>button:nth-of-type(2):hover{
-    background-color: #3e91df;
-    color: white;
+#rightcontent div > button:nth-of-type(2):hover {
+  background-color: #3e91df;
+  color: white;
 }
 
-#rightcontent div button:first-child{
-    background-color: #eeeeee;
-    color: white;
-    cursor: pointer;
-    margin: 5px 5px 5px 5px;
-    border-style: none;
-    border-radius: 50%;
-    height: 60%;
+#rightcontent div button:first-child {
+  background-color: #eeeeee;
+  color: white;
+  cursor: pointer;
+  margin: 5px 5px 5px 5px;
+  border-style: none;
+  border-radius: 50%;
+  height: 60%;
 }
 
-#rightcontent div button:first-child:hover{
-    background-color: #db4c3f;
+#rightcontent div button:first-child:hover {
+  background-color: #db4c3f;
 }
 
 .delbtn {
-    background-color: #db4c3f;
-    color: #ffffff;
-    cursor: pointer;
-    margin: 5px 5px 5px 5px;
-    border-style: none;
-    border-radius: 50%;
-    height: 60%;
+  background-color: #db4c3f;
+  color: #ffffff;
+  cursor: pointer;
+  margin: 5px 5px 5px 5px;
+  border-style: none;
+  border-radius: 50%;
+  height: 60%;
 }
 
-p{
-    margin: 5px 5px 5px 5px;
-    line-height: 1.5em;
+p {
+  margin: 5px 5px 5px 5px;
+  line-height: 1.5em;
 }
