@@ -24,7 +24,6 @@ const projList = (theName) => {
                     - (parse(b.getDuedate(), 'yyyy-MM-dd', new Date()));
             });
         theList = newList;
-        console.log(theList[0].getDuedate());
     }
 
     return {
